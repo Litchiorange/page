@@ -1,0 +1,147 @@
+@import "_minix.scss";
+@import "common.scss";
+.box {
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background: paleturquoise;
+    @include box_flex;
+    line-height: pxTorem(44px);
+    span {
+        color: white;
+    }
+    padding:0 pxTorem(15px);
+    @include sizing;
+    i.iconfont {
+        color: white;
+        font-size: pxTorem(14px);
+    }
+    form {
+        @include flex;
+        position: relative;
+        padding: 0 pxTorem(15px);
+        @include sizing;
+        input {
+            width: 100%;
+            height: pxTorem(35px);
+            margin: pxTorem(5px) 0;
+            background: rgba(0, 0, 0, .3);
+        }
+         ::-webkit-input-placeholder {
+            padding-left: pxTorem(20px);
+            color: white;
+        }
+        i.iconfont {
+            position: absolute;
+            margin-left: pxTorem(5px);
+        }
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+    overflow-y: scroll;
+}
+
+.tab {
+    width: 100%;
+    height: pxTorem(50px);
+    background: white;
+    @include box_flex;
+    li {
+        width: 50%;
+        list-style: none;
+        text-align: center;
+        line-height: pxTorem(50px);
+    }
+    .active {
+        color: white;
+        background: skyblue;
+    }
+}
+
+.listBox {
+    width: 100%;
+    height: pxTorem(180px);
+    background: white;
+    @include box_flex;
+    @include flexWrap;
+    dl {
+        width: 20%;
+        text-align: center;
+        margin: pxTorem(5px) 0;
+        dt img {
+            width: pxTorem(50px);
+            height: pxTorem(50px);
+        }
+    }
+}
+
+.text {
+    width: 100%;
+    height: pxTorem(50px);
+    background: white;
+    margin-top: pxTorem(15px);
+    line-height: pxTorem(50px);
+    border-bottom: 1px solid #ccc;
+    h2 {
+        font-size: pxTorem(16px);
+    }
+}
+
+.picBox {
+    width: 100%;
+    height: auto;
+    background: white;
+    .pic {
+        width: 100%;
+        height: pxTorem(100px);
+        background: white;
+        border-bottom: 1px solid #ccc;
+        dl {
+            @include box_flex;
+            dt {
+                margin: pxTorem(15px) pxTorem(5px);
+                @include sizing;
+                img {
+                    width: pxTorem(70px);
+                    height: pxTorem(70px);
+                }
+            }
+            dd {
+                margin: pxTorem(15px) 0;
+                @include sizing;
+                h2 {
+                    font-size: pxTorem(16px);
+                }
+                p {
+                    margin-top: pxTorem(8px);
+                    @include justify(space-between)
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(44px);
+    background: #f2f1fe;
+    @include box_flex;
+    text-align: center;
+    @include align;
+    dl {
+        width: 33.3%;
+        dt i.iconfont {
+            font-size: pxTorem(14px)
+        }
+    }
+}

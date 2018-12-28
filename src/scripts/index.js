@@ -1,0 +1,1 @@
+window.onload=function(){new Swiper(".swiper-container",{loop:!0,autoplay:!0,pagination:{el:".swiper-pagination"}})};
